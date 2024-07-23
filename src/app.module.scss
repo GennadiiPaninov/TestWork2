@@ -1,0 +1,7 @@
+@import '../src/styles/mixins';
+.icons {
+  @include flex(column, flex-start, none, 10px);
+  position: fixed;
+  right: 0;
+  bottom: 30%;
+}

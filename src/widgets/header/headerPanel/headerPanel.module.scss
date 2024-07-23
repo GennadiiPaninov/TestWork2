@@ -1,0 +1,24 @@
+@import '../src/styles/mixins';
+.postPanel {
+  @include flex(row, none, center, 50px);
+  @media (max-width: 420px) {
+    @include flex(row, none, center, 20px);
+    flex-wrap: wrap;
+  }
+}
+.panelContainer {
+  @include flex(row, none, center, 5px);
+  @media (max-width: 420px) {
+    @include flex(row, none, center, 0px);
+  }
+}
+.titleText {
+  color: var(--color-light-100);
+  font-family: Century Gothic;
+}
+.dropDownItemContainer {
+  @include flex(row, center, center, 5px);
+}
+.dropDownImg {
+  width: 20px;
+}

@@ -1,0 +1,53 @@
+@mixin typography($fontSize, $lineHeight, $fontWeight) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+.Large {
+  @include typography(var(--font-size-xxl), var(--line-height-xxl), var(--font-weight-bold));
+  @media (max-width: 420px) {
+    @include typography(var(--font-size-xlll), var(--line-height-xlll), var(--font-weight-bold));
+  }
+}
+.Large-32 {
+  @include typography(var(--font-size-xll), var(--line-height-xxll), var(--font-weight-bold));
+}
+.LargePlus {
+  @include typography(var(--font-size-xxxxl), var(--line-height-xxxl), var(--font-weight-regular));
+}
+
+.regular_text-16 {
+  @include typography(var(--font-size-l), var(--line-height-l), var(--font-weight-semi-bold));
+  @media (max-width: 420px) {
+    @include typography(var(--font-size-m), var(--line-height-l), var(--font-weight-semi-bold));
+  }
+}
+.regular_text-16-weight {
+  @include typography(var(--font-size-l), var(--line-height-l), var(--font-weight-semi-bold));
+  @media (max-width: 420px) {
+    @include typography(var(--font-size-m), var(--line-height-l), var(--font-weight-semi-bold));
+  }
+}
+.regular_text-18 {
+  @include typography(var(--font-size-x), var(--line-height-xl), var(--font-weight-semi-bold));
+  @media (max-width: 420px) {
+    @include typography(var(--font-size-l), var(--line-height-xlll), var(--font-weight-bold));
+  }
+}
+.regular_text-20 {
+  @include typography(var(--font-size-xl), var(--line-height-xll), var(--font-weight-medium));
+}
+
+.small-text {
+  @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-regular));
+  @media (max-width: 420px) {
+    @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-regular));
+  }
+}
+.small-text-16 {
+  @include typography(var(--font-size-l), var(--line-height-m), var(--font-weight-regular));
+  @media (max-width: 420px) {
+    @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-regular));
+  }
+}

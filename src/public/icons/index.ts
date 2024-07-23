@@ -1,0 +1,14 @@
+export { ArrowUp } from "./arrowUp";
+export { BurgerMenu } from "./burgerMenu";
+export { Comment } from "./comment";
+export { Eye } from "./eye";
+export { ChatIcon } from "./chatIcon";
+export { Heart } from "./heart";
+export { Line } from "./line";
+export { LinkIcon } from "./linkIcon";
+export { TelegramIcon } from "./telegramIcon";
+export { TheGlobe } from "./theGlobe";
+export { ToShare } from "./toShare";
+export { ViberIcon } from "./viberIcon";
+export { Watch } from "./watch";
+export { WhatsAppIcon } from "./whatsAppIcon";

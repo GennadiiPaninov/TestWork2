@@ -1,0 +1,29 @@
+@import '../src/styles/mixins';
+.navigatorWrapper {
+  position: absolute;
+  right: 10%;
+  z-index: 1;
+  border-left: 1px solid var(--color-light-800);
+  padding: 30px;
+  @include flex(column, flex-start, none, 20px);
+  @media (max-width: 420px) {
+    position: relative;
+    right: 0%;
+  }
+}
+.navigatorContainer {
+  @include flex(column, flex-start, none, 20px);
+}
+.titleText {
+  border-left: var(--color-light-800) 5px solid;
+  padding-left: 9px;
+
+  color: var(--color-dark-900) !important;
+}
+.activePath {
+  color: var(--color-dark-900) !important;
+  border-left: var(--color-warning-300) 5px solid;
+}
+.titleText:hover {
+  text-decoration: underline solid var(--color-dark-900) !important;
+}

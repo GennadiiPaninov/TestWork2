@@ -1,0 +1,60 @@
+@import '../src/styles/mixins';
+.page {
+  margin-top: 50px;
+  width: 100%;
+  @include flex(column, none, center, 0px);
+  @media (max-width: 420px) {
+    margin-top: 10px;
+  }
+}
+.pageWrapper {
+  width: 68.75%;
+  height: auto;
+  @media (max-width: 420px) {
+    padding: 20px;
+    width: 100%;
+  }
+}
+.pageContainer {
+  @include flex(column, none, none, 50px);
+  width: 70%;
+
+  height: auto;
+  @media (max-width: 420px) {
+    @include flex(column, none, none, 10px);
+    width: 100%;
+  }
+}
+.pagePath {
+  @include flex(row, none, center, 10px);
+  flex-wrap: wrap;
+  @media (max-width: 420px) {
+    @include flex(row, none, center, 0px);
+  }
+}
+.titleText {
+  cursor: pointer;
+}
+.activePath {
+  color: var(--color-warning-300);
+}
+.postDescription {
+  font-family: 'Century Gothic', sans-serif;
+}
+.postInfo {
+  @include flex(column, none, none, 50px);
+  width: 100%;
+
+  height: auto;
+}
+.postTitle {
+  font-family: 'RadiateSans-BoldSemiExpanded', sans-serif;
+  color: var(--color-warning-300);
+  letter-spacing: 2px;
+}
+.postText {
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
