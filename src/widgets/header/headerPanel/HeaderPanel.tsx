@@ -4,9 +4,12 @@ import { Comment, Eye, Heart, ToShare, Watch } from '../../../public'
 import Vk from '../../../public/images/img.png'
 import Xicon from '../../../public/images/img_1.png'
 import {
-     DropdownMenuContent, DropdownMenuItem,
-    Typography, useIsMobile
-
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  Typography,
+  useIsMobile,
 } from '../../../shared'
 export const HeaderPanel = () => {
   const isMobile = useIsMobile(900)
@@ -32,28 +35,28 @@ export const HeaderPanel = () => {
         </Typography>
       </div>
       <div className={s.panelContainer}>
-        {/*<DropdownMenuContent>*/}
-        {/*  <DropdownMenuTrigger>*/}
-        {/*    <ToShare />*/}
-        {/*  </DropdownMenuTrigger>*/}
-        {/*  <DropdownMenuContent>*/}
-        {/*    <DropdownMenuItem>*/}
-        {/*      <div className={s.dropDownItemContainer}>*/}
-        {/*        {!isMobile && <img alt={''} className={s.dropDownImg} src={Vk} />} Вконтакте*/}
-        {/*      </div>*/}
-        {/*    </DropdownMenuItem>*/}
-        {/*    <DropdownMenuItem>*/}
-        {/*      <div className={s.dropDownItemContainer}>*/}
-        {/*        {!isMobile && <img alt={''} className={s.dropDownImg} src={Xicon} />} X*/}
-        {/*      </div>*/}
-        {/*    </DropdownMenuItem>*/}
-        {/*  </DropdownMenuContent>*/}
-        {/*</DropdownMenuContent>*/}
-        {/*{!isMobile ? (*/}
 
-        {/*) : (*/}
-        {/*  <ToShare />*/}
-        {/*)}*/}
+        {!isMobile ? (
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <ToShare />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>
+                <div className={s.dropDownItemContainer}>
+                  {!isMobile && <img alt={''} className={s.dropDownImg} src={Vk} />} Вконтакте
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <div className={s.dropDownItemContainer}>
+                  {!isMobile && <img alt={''} className={s.dropDownImg} src={Xicon} />} X
+                </div>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        ) : (
+          <ToShare />
+        )}
         <Typography className={s.titleText} variant={'small-text-16'}>
           5
         </Typography>
